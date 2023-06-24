@@ -6,4 +6,5 @@ app.get("/", (req, res) => {
   res.status(200).send({ message: "I'm deployed!" });
 });
 
-app.listen(3001);
+const port = process.env.PORT;
+app.listen(port || 3000);
